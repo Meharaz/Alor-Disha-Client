@@ -1,9 +1,14 @@
 import React from 'react';
+import ServiceCard from '../../Components/ServiceCard/ServiceCard';
+import { Helmet } from 'react-helmet-async';
 
 const Services = () => {
     return (
         <div>
-            service page
+            <Helmet>
+                <title>Alor Disha | Services </title>
+            </Helmet>
+            <ServiceCard />
         </div>
     );
 };
