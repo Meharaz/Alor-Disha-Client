@@ -13,7 +13,7 @@ const Members = () => {
                     setMembers(data.members);
                 } else {
                     console.error('Invalid data format:', data);
-                    setMembers([]); // set empty array if data is not as expected
+                    setMembers([]);
                 }
             })
             .catch(err => console.error('Fetch error:', err));
@@ -25,7 +25,7 @@ const Members = () => {
                 <title>Alor Disha | Members</title>
             </Helmet>
             <h2>These are the honorable Members</h2>
-            <div className='grid gap-4 grid-cols-4'>
+            <div className='grid gap-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 py-10'>
                 <div>
                     <p className='text-xl font-bold'>Volunteer</p>
                     {members && Array.isArray(members) && members
@@ -50,7 +50,7 @@ const Members = () => {
                             <MemberCard key={item.id} item={item} />
                         ))}
                 </div>
-                <div>
+                <div className='grid'>
                 <p className='text-xl font-bold'>General Member</p>
                     {members && Array.isArray(members) && members
                         .filter(member => member.role === "General Member")

@@ -1,0 +1,72 @@
+{
+    "ongoing_projects": [
+        {
+            "id": 1,
+            "title": "Cyclone Relief Distribution",
+            "image": "images/projects/cyclone_relief.jpg",
+            "description": "Providing aid to victims of natural disasters, including food, clean water, and basic necessities."
+        },
+        {
+            "id": 2,
+            "title": "Winter Blanket Distribution",
+            "image": "images/projects/blanket_distribution.jpg",
+            "description": "Supplying blankets to people affected by cold weather, focusing on rural and underprivileged areas."
+        },
+        {
+            "id": 3,
+            "title": "Ramadan Iftar Program",
+            "image": "images/projects/ramadan_iftar.jpg",
+            "description": "Distributing iftar food items to the needy during the holy month of Ramadan."
+        },
+        {
+            "id": 4,
+            "title": "Educational & Construction Material Support",
+            "image": "images/projects/education_support.jpg",
+            "description": "Providing books, stationery, and construction materials to religious and educational institutions."
+        },
+        {
+            "id": 5,
+            "title": "Seminars & Awareness Programs",
+            "image": "images/projects/seminars.jpg",
+            "description": "Organizing educational and awareness seminars on health, environment, and social issues."
+        },
+        {
+            "id": 6,
+            "title": "National Day Celebrations",
+            "image": "images/projects/national_day.jpg",
+            "description": "Hosting cultural and educational programs to celebrate significant national events."
+        },
+        {
+            "id": 7,
+            "title": "Korbani (Qurbani) Service",
+            "image": "images/projects/korbani_service.jpg",
+            "description": "Organizing livestock sacrifice services, especially for expatriates, ensuring hygiene and environmental care."
+        }
+    ],
+    "planned_projects": [
+        {
+            "id": 1,
+            "title": "International Standard Educational Institutions",
+            "image": "images/projects/education_institution.jpg",
+            "description": "Establishing religious and general education centers to develop a well-educated nation with strong moral values."
+        },
+        {
+            "id": 2,
+            "title": "Hospitals & Diagnostic Centers",
+            "image": "images/projects/hospitals.jpg",
+            "description": "Setting up hospitals and diagnostic centers to provide affordable, high-quality medical services."
+        },
+        {
+            "id": 3,
+            "title": "Publishing House",
+            "image": "images/projects/publishing_house.jpg",
+            "description": "Printing and distributing books, magazines, and research journals to promote knowledge and education."
+        },
+        {
+            "id": 4,
+            "title": "Media Organization",
+            "image": "images/projects/media_organization.jpg",
+            "description": "Creating an independent media platform to provide objective news and educational content."
+        }
+    ]
+}
