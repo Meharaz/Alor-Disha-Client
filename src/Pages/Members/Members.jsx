@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Helmet } from 'react-helmet-async';
+ 
 import MemberCard from '../../Components/MemberCard/MemberCard';
 
 const Members = () => {
@@ -21,9 +21,7 @@ const Members = () => {
 
     return (
         <div>
-            <Helmet>
-                <title>Alor Disha | Members</title>
-            </Helmet>
+
             <h2>These are the honorable Members</h2>
             <div className='grid gap-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 py-10'>
                 <div>

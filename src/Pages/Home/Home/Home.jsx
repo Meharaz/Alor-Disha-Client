@@ -1,13 +1,11 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+ 
 import SectionTitle from '../../../Components/SectionTitle/SectionTitle';
 
 const Home = () => {
     return (
         <div>
-            <Helmet>
-                <title>Alor Disha Foundation | Home</title>
-            </Helmet>
+
 
 
             <SectionTitle
