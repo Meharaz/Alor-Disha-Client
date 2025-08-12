@@ -1,61 +1,40 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import img from '../../assets/AboutBg.jpg'
 import MemberCard from '../../Components/MemberCard/MemberCard';
 import Cover from '../../Components/Cover/Cover';
+import useMembers from '../../Components/Hooks/useMembers';
+import SectionTitle from '../../Components/SectionTitle/SectionTitle';
 
 const Members = () => {
-    const [members, setMembers] = useState([]);
-
-    useEffect(() => {
-        fetch('members.json')
-            .then(res => res.json())
-            .then(data => {
-                if (data && data.members && Array.isArray(data.members)) {
-                    setMembers(data.members);
-                } else {
-                    console.error('Invalid data format:', data);
-                    setMembers([]);
-                }
-            })
-            .catch(err => console.error('Fetch error:', err));
-    }, []);
-
+    const [members] = useMembers();
+    const volunteer = members.filter(item => item.role === "Volunteer")
+    const trusty = members.filter(item => item.role === "Trusty Board Member")
+    // const volunteer = members.filter(item => item.role === "Volunteer")
     return (
         <div>
-<Cover title={"Honorable Members"} img={img}/>
-            <div className='grid gap-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 py-10'>
-                <div>
-                    <p className='text-xl font-bold'>Volunteer</p>
-                    {members && Array.isArray(members) && members
-                        .filter(member => member.role === "Volunteer")
-                        .map(item => (
+            <Cover title={"Honorable Members"} img={img} />
+            <div>
+                <SectionTitle
+                subHeading={'Our Honorable Trusty Board Members'}
+                heading={"trustee"}
+                />
+                <div className='grid lg:grid-cols-3 sm:grid-cols-1 md:grid-cols-2'>
+                    {
+                        trusty.map(item => (
                             <MemberCard key={item.id} item={item} />
                         ))}
                 </div>
-                <div>
-                <p className='text-xl font-bold'>Blood Doner</p>
-                    {members && Array.isArray(members) && members
-                        .filter(member => member.role === "Blood Donor")
-                        .map(item => (
+                <SectionTitle
+                subHeading={'Executive Committee'}
+                heading={"Our Honorable Executive Committee Members"}
+                />
+                <div className='grid lg:grid-cols-3 sm:grid-cols-1 md:grid-cols-2'>
+                    {
+                        volunteer.map(item => (
                             <MemberCard key={item.id} item={item} />
                         ))}
                 </div>
-                <div>
-                <p className='text-xl font-bold'>Trusty Board Member</p>
-                    {members && Array.isArray(members) && members
-                        .filter(member => member.role === "Trusty Board Member")
-                        .map(item => (
-                            <MemberCard key={item.id} item={item} />
-                        ))}
-                </div>
-                <div className='grid'>
-                <p className='text-xl font-bold'>General Member</p>
-                    {members && Array.isArray(members) && members
-                        .filter(member => member.role === "General Member")
-                        .map(item => (
-                            <MemberCard key={item.id} item={item} />
-                        ))}
-                </div>
+
             </div>
         </div>
     );
