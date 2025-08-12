@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import ServiceCard from '../../Components/ServiceCard/ServiceCard';
- 
+import Cover from '../../Components/Cover/Cover';
+import img from '../../assets/AboutBg.jpg'
 
 const Services = () => {
 
@@ -15,8 +16,8 @@ const Services = () => {
 
     return (
         <div>
-
-            <div className=' py-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3'>
+            <Cover title={"services"} img={img} />
+            <div className='py-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3'>
                 {
                     services.map(item =>
                         <ServiceCard

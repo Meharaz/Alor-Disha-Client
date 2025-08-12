@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
- 
+import img from '../../assets/AboutBg.jpg'
 import MemberCard from '../../Components/MemberCard/MemberCard';
+import Cover from '../../Components/Cover/Cover';
 
 const Members = () => {
     const [members, setMembers] = useState([]);
@@ -21,8 +22,7 @@ const Members = () => {
 
     return (
         <div>
-
-            <h2>These are the honorable Members</h2>
+<Cover title={"Honorable Members"} img={img}/>
             <div className='grid gap-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 py-10'>
                 <div>
                     <p className='text-xl font-bold'>Volunteer</p>
