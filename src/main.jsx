@@ -9,7 +9,7 @@ import webBg from "./assets/webBg.jpg"
 createRoot(document.getElementById('root')).render(
   <StrictMode>
 
-      <div className='mx-auto'>
+      <div className='mx-auto font-primary'>
         <RouterProvider router={router} />
       </div>
   </StrictMode>,

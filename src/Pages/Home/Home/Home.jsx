@@ -3,18 +3,18 @@ import AboutBg from '../../../assets/AboutBg.jpg'
 import SectionTitle from '../../../Components/SectionTitle/SectionTitle';
 import Cover from '../../../Components/Cover/Cover';
 import HomeBanner from '../../../Components/HomeBanner/HomeBanner';
+import OnGoingProjects from '../../../Components/OnGoingProjects';
+import ChairmanSaying from './ChairmanSaying';
+
+
 
 const Home = () => {
     return (
         <div>
             <HomeBanner />
-            <SectionTitle
-                subHeading={"This is a shared section"}
-                heading={"This is About section"}
-            >
+            <ChairmanSaying/>
+            <OnGoingProjects />
 
-            </SectionTitle>
-            this is home page
         </div>
     );
 };
